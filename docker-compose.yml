@@ -19,6 +19,7 @@ services:
     networks:
       - jenkins-bootstrap_jenkins 
       - rev-pxy
+      - elk-stack
     ports:
       - "80:80"
       - "443:443"
