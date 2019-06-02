@@ -17,14 +17,14 @@ services:
         target: /etc/ssl
         read_only: true
     networks:
+      - jenkins-bootstrap_jenkins 
       - rev-pxy
-      - jenkins
     ports:
       - "80:80"
       - "443:443"
 
 networks:
   rev-pxy:
-  jenkins:
+  jenkins-bootstrap_jenkins:
     external: true
     
