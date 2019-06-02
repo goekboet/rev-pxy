@@ -17,7 +17,8 @@ services:
         target: /etc/ssl
         read_only: true
     networks:
-      - byappt
+      - rev-pxy
+      - jenkins
     ports:
       - "80:80"
       - "443:443"
