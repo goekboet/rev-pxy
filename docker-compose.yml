@@ -27,4 +27,6 @@ networks:
   rev-pxy:
   jenkins-bootstrap_jenkins:
     external: true
+  elk-stack:
+    external: true
     
