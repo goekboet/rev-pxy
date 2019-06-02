@@ -17,7 +17,7 @@ services:
         target: /etc/ssl
         read_only: true
     networks:
-      - jenkins-bootstrap_jenkins 
+      - jenkins 
       - rev-pxy
       - elk-stack
     ports:
@@ -26,7 +26,8 @@ services:
 
 networks:
   rev-pxy:
-  jenkins-bootstrap_jenkins:
+    external: true
+  jenkins:
     external: true
   elk-stack:
     external: true
