@@ -16,6 +16,10 @@ services:
         source: ./ssl
         target: /etc/ssl
         read_only: true
+      - type: bind
+        source: ./nginx/sites_enabled
+        target: /etc/nginx/sites-enabled
+        read_only: true
     networks:
       - jenkins 
       - rev-pxy
